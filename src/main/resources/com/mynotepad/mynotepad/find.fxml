@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane prefHeight="148.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mynotepad.mynotepad.FindController">
+   <content>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="118.0" prefWidth="256.0" spacing="20.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="258.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="Find what:" />
+                        <TextField fx:id="txtFind" onKeyTyped="#findTyped" prefHeight="25.0" prefWidth="181.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="250.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <CheckBox fx:id="checkboxMatchCase" mnemonicParsing="false" onMouseClicked="#checkboxMatchCase" text="Match case" />
+                              <CheckBox fx:id="checkboxWrapAround" mnemonicParsing="false" onMouseClicked="#checkboxWrapAroundClicked" text="Wrap around" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="49.0" text="Direction" />
+                              <CheckBox fx:id="checkboxUp" mnemonicParsing="false" onMouseClicked="#checkboxUpClicked" text="Up" />
+                              <CheckBox fx:id="checkboxDown" mnemonicParsing="false" onMouseClicked="#checkboxDownClicked" text="Down" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="96.0" prefWidth="77.0" spacing="10.0">
+               <children>
+                  <Button fx:id="findButton" mnemonicParsing="false" onMouseClicked="#findClicked" text="Find" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onMouseClicked="#cancelClicked" text="Cancel" />
+               </children></VBox>
+         </children>
+      </HBox>
+   </content>
+</DialogPane>
